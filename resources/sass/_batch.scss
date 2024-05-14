@@ -1,0 +1,107 @@
+li.nav-item {
+    margin-left: 0.5rem;
+    list-style: none;
+}
+
+#connections_area {
+    position: relative;
+}
+
+#connections {
+    width: 15rem;
+    height: 2rem;
+    font-size: 12pt;
+}
+
+#loading {
+    margin-left: 5px;
+}
+
+#connection_loading {
+    display: none;
+    position: relative;
+    top: -2px;
+}
+
+#controls {
+    position: relative;
+    padding: 5px;
+
+    &.disabled {
+        &:before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 999;
+            content: ' ';
+            background-color: #ffffff;
+            opacity: 0.5;
+        }
+    }
+}
+
+#test_area {
+    display: flex;
+    margin: 0.5rem;
+}
+
+.no-margin {
+    padding: 0 !important;
+}
+
+.edit-select {
+    height: 1.7rem;
+}
+
+.term-btn {
+    position: relative;
+    top: -1px;
+    color: #ffffff;
+    background-color: #0000dd;
+    border: 1px solid #0000dd;
+    border-radius: 3px;
+    &.danger {
+        background-color: #cc0000;
+        &:hover {
+            background-color: #990000;
+        }
+    }
+    &:hover {
+        background-color: #000099;
+    }
+    &:disabled {
+        opacity: 0.5;
+    }
+}
+.float-right {
+    float: right;
+    margin-left: 0.25rem;
+}
+
+#connection_editor {
+    input {
+        width: 95%;
+    }
+    &> div.required {
+        color: #cc0000;
+        margin: 2px;
+    }
+    &> div.optional {
+        margin: 2px 2px 4px 12px;
+    }
+}
+
+div [data-plugin] {
+    cursor: pointer;
+    margin-left: 1rem;
+
+    &.working {
+        color: #eeeeee;
+    }
+
+    &.done {
+        color: #cc0000;
+    }
+}
